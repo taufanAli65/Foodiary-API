@@ -74,6 +74,18 @@ The API will be available at `http://localhost:8000`.
   curl -X GET "http://localhost:8000/search_food_by_id?food_id=12345"
   ```
 
+### Scan Food Image
+
+- **URL:** `/scan`
+- **Method:** `POST`
+- **Form Data:**
+  - `image` (required): The image file to be scanned.
+- **Description:** Scans a food image and returns detected foods with their nutritional information.
+- **Example:**
+  ```bash
+  curl -X POST "http://localhost:8000/scan" -F "image=@path_to_your_image.jpg"
+  ```
+
 ## Error Handling
 
 If an error occurs, the API will return a JSON response with an `error` field describing the issue.
